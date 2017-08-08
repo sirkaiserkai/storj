@@ -24,6 +24,7 @@ type Client struct {
 	Tokens   TokenService
 	Buckets  BucketService
 	Contacts ContactService
+	Users    UserService
 }
 
 func NewClient() *Client {
@@ -36,6 +37,7 @@ func NewClient() *Client {
 	c.Tokens = TokenService{client: c}
 	c.Buckets = BucketService{client: c}
 	c.Contacts = ContactService{client: c}
+	c.Users = UserService{client: c}
 
 	return c
 }
